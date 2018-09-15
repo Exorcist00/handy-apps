@@ -1,0 +1,48 @@
+Notatki
+	Kilka rodzajów notatek, umożliwiających tworzenie krótkich wiadomości, list zakupów, przepisów, uproszczonego inwentarza, możliwość grupowania ich w zależności od potrzeb.
+	-notesList
+	-simpleNote -tekst
+	-listNote -checkboxy
+	-recipeNote -lista i tekst
+	-inventoryNote -lista + pole na ilość
+Alarm
+	Funkcja budzika z opcją drzemki, możliwość dodania kilku o różnych godzinach, dniach tygodnia.
+	Dodawanie alarmów na konkretne dni.
+	Modyfikacja dźwięku alarmu, wyświetlanej wiadomości.
+	Ustawianie minutnika, funkcja stopera.
+	-alarmClock
+	-timer (minutnik)
+	-stopwatch
+Galeria
+	Miniatury zdjęć i grafik, możliwość ich zaznaczania i usuwania zaznaczonych, przenoszenia ich do innych folderów. Podgląd pojedynczych grafik na pełnym ekranie.
+	-gallery
+	-imagePreview
+Odtwarzacz mp3
+	Odtwarzanie plików w formacie mp3, przyciski start, pauza, przewijanie do następnego/poprzedniego utworu, dodawanie list utworów i plików do nich, opcja odtwarzania pojedynczego pliku, zapętlania pliku lub całej listy, możliwość ustawienia wyłączenia się odtwarzacza po ustalonym czasie.
+	-musicPlayer
+	-playlist + foldery(all)
+	-playlistList
+Czytnik plików tekstowo-graficznych
+	Przeglądanie plików zawierających tekst oraz grafikę w trybie ciągłym, tzn. jedna strona pod drugą, powiększanie, przewijanie stron, zmiana jasności, koloru tekstu, zapamiętywanie miejsca ostatnio przeczytanego w danym pliku.
+	-reader
+Przeglądarka internetowa
+	Możliwość dodawania kart, zapisywania stron do ulubionych, blokowania przekierowań, zapisywanie tekstu i grafik z otwartej strony do pliku.
+	-browser
+	-browserTabList
+	-browserMainPage?
+Konwerter jednostek
+	Konwersja wybranych walut, długości, powierzchni, objętości, wagi, dodawanie przez użytkownika własnych jednostek oraz konwersja przy ich użyciu, modyfikowanie ich wartości.
+	-converter
+Manager plików
+	Przeglądanie plików i folderów, dodawanie folderów, zaznaczanie plików, przenoszenie i usuwanie zaznaczonych plików, zmiana nazwy pliku.
+	-fileManager
+Słownik
+	Tworzenie odrębnych słowników, dodawanie i modyfikacja haseł, przeglądanie i wyszukiwanie wśród haseł.
+	-dictionaryList
+	-dictionary
+	-dictionaryEntry? popup?
+Fiszki/SuperMemo
+	Dodawanie zbiorów kart, dodawanie do nich poszczególnych kart, zawierających hasła w kilku kombinacjach, jak na przykład słowo i jego tłumaczenie, czy definicja, opis gramatyki. Powtarzanie i ocenianie stanu zapamiętania w kilkustopniowej skali i na tej podstawie ustalenie czasu, po jakim zalecane jest powtórzenie danego zagadnienia.
+	-cardSets
+	-cardEdit
+	-cardPreview + skip button
