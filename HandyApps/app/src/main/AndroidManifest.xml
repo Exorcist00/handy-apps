@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.emem.handyapps">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainMenuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".notes.NotesListActivity" />
+        <activity android:name=".notes.SimpleNoteActivity" />
+        <activity android:name=".notes.ListNoteActivity" />
+        <activity android:name=".notes.RecipeNoteActivity" />
+        <activity android:name=".notes.InventoryNoteActivity" />
+        <activity android:name=".alarm.AlarmClockActivity" />
+        <activity android:name=".alarm.TimerActivity" />
+        <activity android:name=".alarm.StopwatchActivity" />
+        <activity android:name=".gallery.GalleryActivity" />
+        <activity android:name=".gallery.ImagePreviewActivity" />
+        <activity android:name=".player.MusicPlayerActivity" />
+        <activity android:name=".player.PlaylistActivity" />
+        <activity android:name=".player.PlaylistListActivity" />
+        <activity android:name=".ReaderActivity" />
+        <activity android:name=".browser.BrowserActivity" />
+        <activity android:name=".browser.BrowserTabListActivity" />
+        <activity android:name=".ConverterActivity" />
+        <activity android:name=".FileManagerActivity" />
+        <activity android:name=".dictionary.DictionaryActivity" />
+        <activity android:name=".supermemo.CardSetsActivity" />
+        <activity android:name=".supermemo.CardEditActivity" />
+        <activity android:name=".supermemo.CardPreviewActivity" />
+        <receiver android:name=".alarm.TimerReceiver"/>
+        <receiver android:name=".alarm.AlarmReceiver"/>
+    </application>
+
+</manifest>
