@@ -13,7 +13,7 @@ import com.emem.handyapps.browser.BrowserTabListActivity;
 import com.emem.handyapps.dictionary.DictionaryActivity;
 import com.emem.handyapps.gallery.GalleryActivity;
 import com.emem.handyapps.notes.NotesListActivity;
-import com.emem.handyapps.player.PlaylistListActivity;
+import com.emem.handyapps.player.PlaylistActivity;
 import com.emem.handyapps.supermemo.CardSetsActivity;
 
 public class MainMenuActivity extends AppCompatActivity {
@@ -63,7 +63,7 @@ public class MainMenuActivity extends AppCompatActivity {
     }
 
     public void goToPlayer(View view){
-        Intent intent = new Intent(this, PlaylistListActivity.class);
+        Intent intent = new Intent(this, PlaylistActivity.class);
         startActivity(intent);
     }
 

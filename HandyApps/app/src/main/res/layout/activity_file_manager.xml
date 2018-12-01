@@ -1,9 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FileManagerActivity">
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/folderPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="pickFolder"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/folderAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onFolderAdd"
+            android:text="Add" />
+        <Button
+            android:id="@+id/fileMove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onFileMove"
+            android:text="Move"/>
+        <Button
+            android:id="@+id/fileDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onFileDelete"
+            android:text="Delete"/>
+        <Button
+            android:id="@+id/fileNameChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onFileNameChange"
+            android:text="Change Name"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/filesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

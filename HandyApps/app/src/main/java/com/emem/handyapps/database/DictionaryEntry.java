@@ -44,7 +44,30 @@ public class DictionaryEntry {
         Cursor cursor = db.query(TABLE_NAME,
                 new String[]{COLUMN_ID, COLUMN_WORD, COLUMN_MEANING, COLUMN_DICT_ID},
                 COLUMN_DICT_ID + "=?",
-                new String[]{String.valueOf(dictId)}, null, null, COLUMN_WORD + "DESC");
+                new String[]{String.valueOf(dictId)}, null, null, COLUMN_WORD + "ASC");
+        List<DictionaryEntry> result = new ArrayList<>();
+        if (cursor!=null) {
+            if (cursor.moveToFirst())
+                do {
+                    DictionaryEntry dictionaryEntry = new DictionaryEntry();
+                    dictionaryEntry.setId(cursor.getInt(cursor.getColumnIndex(COLUMN_ID)));
+                    dictionaryEntry.setWord(cursor.getString(cursor.getColumnIndex(COLUMN_WORD)));
+                    dictionaryEntry.setMeaning(cursor.getString(cursor.getColumnIndex(COLUMN_MEANING)));
+                    dictionaryEntry.setDictId(cursor.getInt(cursor.getColumnIndex(COLUMN_DICT_ID)));
+                    result.add(dictionaryEntry);
+                } while (cursor.moveToNext());
+            cursor.close();
+        }
+        db.close();
+        return result;
+    }
+
+    public static List<DictionaryEntry> searchDictionaryEntries(DatabaseHelper dbHelper, int dictId, String text){
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_NAME,
+                new String[]{COLUMN_ID, COLUMN_WORD, COLUMN_MEANING, COLUMN_DICT_ID},
+                COLUMN_DICT_ID + "=? AND " + COLUMN_WORD + " LIKE ?",
+                new String[]{String.valueOf(dictId), "%"+text+"%"}, null, null, COLUMN_WORD + "ASC");
         List<DictionaryEntry> result = new ArrayList<>();
         if (cursor!=null) {
             if (cursor.moveToFirst())

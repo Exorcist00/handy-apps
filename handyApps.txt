@@ -22,6 +22,9 @@ Odtwarzacz mp3
 	-musicPlayer
 	-playlist + foldery(all)
 	-playlistList
+	https://code.tutsplus.com/tutorials/create-a-music-player-on-android-project-setup--mobile-22764
+	https://code.tutsplus.com/tutorials/create-a-music-player-on-android-song-playback--mobile-22778
+	https://code.tutsplus.com/tutorials/create-a-music-player-on-android-user-controls--mobile-22787
 Czytnik plików tekstowo-graficznych
 	Przeglądanie plików zawierających tekst oraz grafikę w trybie ciągłym, tzn. jedna strona pod drugą, powiększanie, przewijanie stron, zmiana jasności, koloru tekstu, zapamiętywanie miejsca ostatnio przeczytanego w danym pliku.
 	-reader

@@ -9,6 +9,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     private static final String DATABASE_NAME = "handy_apps_db";
+    private static final String DROP_TABLE_IF_EXISTS = "DROP TABLE IF EXISTS ";
 
     public DatabaseHelper(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -19,16 +20,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(Unit.CREATE_TABLE);
         db.execSQL(Dictionary.CREATE_TABLE);
         db.execSQL(DictionaryEntry.CREATE_TABLE);
+        db.execSQL(MemoCardSet.CREATE_TABLE);
+        db.execSQL(MemoCard.CREATE_TABLE);
         initializeUnits();
         long dictId = Dictionary.insertDictionary(this, "eng-pl");
         initializeDictionaryEntries(dictId);
+        long setId = MemoCardSet.insertMemoCardSet(this, "test");
+        initializeMemoCards(setId);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + Unit.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + Dictionary.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + DictionaryEntry.TABLE_NAME);
+        db.execSQL(DROP_TABLE_IF_EXISTS + Unit.TABLE_NAME);
+        db.execSQL(DROP_TABLE_IF_EXISTS + Dictionary.TABLE_NAME);
+        db.execSQL(DROP_TABLE_IF_EXISTS + DictionaryEntry.TABLE_NAME);
+        db.execSQL(DROP_TABLE_IF_EXISTS + MemoCardSet.TABLE_NAME);
+        db.execSQL(DROP_TABLE_IF_EXISTS + MemoCard.TABLE_NAME);
         onCreate(db);
     }
 
@@ -66,5 +73,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         DictionaryEntry.insertDictionaryEntry( this, "tawny", "śniady, płowy, żółtobrązowy", (int)id);
         DictionaryEntry.insertDictionaryEntry( this, "spyglass", "lornetka, mała luneta", (int)id);
         DictionaryEntry.insertDictionaryEntry( this, "parsnip", "pasternak", (int)id);
+    }
+
+    private void initializeMemoCards(long id){
+        MemoCard.insertMemoCard(this, MemoCard.TYPE_A, "\"I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones.\"― Albert Einstein", "?", "?", "2018-09-27", (int)id);
+        MemoCard.insertMemoCard(this, MemoCard.TYPE_B, "A", "B", "?", "2018-09-25", (int)id);
+        MemoCard.insertMemoCard(this, MemoCard.TYPE_C, "X", "Y", "Z", "2018-09-26", (int)id);
     }
 }

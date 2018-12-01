@@ -59,13 +59,13 @@
             android:onClick="goToBrowser"
             android:text="Browser" />
 
-        <Button
-            android:id="@+id/readerButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:onClick="goToReader"
-            android:text="Reader" />
+        <!--<Button-->
+            <!--android:id="@+id/readerButton"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:onClick="goToReader"-->
+            <!--android:text="Reader" />-->
     </LinearLayout>
 
     <LinearLayout
