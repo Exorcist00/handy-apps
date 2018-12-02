@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/> 
+    <!-- todo check and change min sdk to 16 -->
     <!--<uses-permission android:name="android.permission.WRITE_SETTINGS"/>-->
 
     <application
@@ -13,35 +15,83 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainMenuActivity">
+        <activity android:name=".MainMenuActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".notes.NotesListActivity" />
-        <activity android:name=".notes.SimpleNoteActivity" />
-        <activity android:name=".notes.ListNoteActivity" />
-        <activity android:name=".notes.RecipeNoteActivity" />
-        <activity android:name=".notes.InventoryNoteActivity" />
-        <activity android:name=".alarm.AlarmClockActivity" />
-        <activity android:name=".alarm.TimerActivity" />
-        <activity android:name=".alarm.StopwatchActivity" />
-        <activity android:name=".gallery.GalleryActivity" />
-        <activity android:name=".gallery.ImagePreviewActivity" />
-        <activity android:name=".player.MusicPlayerActivity" />
-        <activity android:name=".player.PlaylistActivity" />
-        <activity android:name=".ReaderActivity" />
-        <activity android:name=".browser.BrowserActivity" />
-        <activity android:name=".browser.BrowserTabListActivity" />
-        <activity android:name=".ConverterActivity" />
-        <activity android:name=".FileManagerActivity" />
-        <activity android:name=".dictionary.DictionaryActivity" />
-        <activity android:name=".supermemo.CardSetsActivity" />
-        <activity android:name=".supermemo.CardPreviewActivity" />
-        <receiver android:name=".alarm.TimerReceiver"/>
-        <receiver android:name=".alarm.AlarmReceiver"/>
+        <activity android:name=".notes.NotesListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".notes.SimpleNoteActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".notes.ListNoteActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".notes.RecipeNoteActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".notes.InventoryNoteActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".alarm.AlarmClockActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".alarm.TimerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".alarm.StopwatchActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".gallery.GalleryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".gallery.ImagePreviewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".player.MusicPlayerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".player.PlaylistActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".ReaderActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".browser.BrowserActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".browser.BrowserTabListActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".ConverterActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".FileManagerActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".dictionary.DictionaryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".supermemo.CardSetsActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name=".supermemo.CardPreviewActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation" />
+        <receiver android:name=".alarm.TimerReceiver"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation"/>
+        <receiver android:name=".alarm.AlarmReceiver"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation"/>
+        <service android:name=".player.MusicPlayerService"/>
     </application>
 
 </manifest>

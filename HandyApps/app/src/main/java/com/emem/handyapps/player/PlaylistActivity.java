@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.emem.handyapps.R;
 
 public class PlaylistActivity extends AppCompatActivity {
-//todo
+//todo remove
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
